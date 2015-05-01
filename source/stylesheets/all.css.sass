@@ -1,5 +1,7 @@
+@import "compass/css3/transform"
 @import "settings"
 @import "foundation"
+@import "index"
 
 // Or selectively include components
 // @import
@@ -38,3 +40,9 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility"
+
+.shadowed
+  -webkit-filter: drop-shadow(5px 5px 12px rgba(0, 0, 0, 0.5))
+  filter: url(#drop-shadow)
+  -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=5, Color='#444')"
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=5, OffY=5, Color='#444')"

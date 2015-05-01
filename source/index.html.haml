@@ -1,6 +1,20 @@
+- content_for :header do
+  = javascript_include_tag "index"
+
 .row
-  .col-sm-4
-    %h1 Gone Into Hiding
-  .col-sm-8
-    %h1 Gone Into Hiding
+  .columns.small-12.image-container
+    .photo
+      %img{"data-interchange" => "[#{image_path("bye-tis-249x300.png")}, (small)], [#{image_path("bye-tis-374x450.png")}, (medium)], [#{image_path("bye-tis-548x659.png")}, (large)]", class: "shadowed"}
+  .columns.small-12
+    %h1.title Gone Into Hiding
     %p.why Galgathor has been alive for a good seven years now, and it's time to rest.
+
+%svg{height: "0", xmlns: "http://www.w3.org/2000/svg"}
+  %filter#drop-shadow
+    %fegaussianblur{in: "SourceAlpha", stddeviation: "4"}
+    %feoffset{dx: "5", dy: "5", result: "offsetblur"}
+    %feflood{"flood-color" => "rgba(0,0,0,0.5)"}
+    %fecomposite{in2: "offsetblur", operator: "in"}
+    %femerge
+      %femergenode
+      %femergenode{in: "SourceGraphic"}
