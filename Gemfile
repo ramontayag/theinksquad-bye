@@ -20,8 +20,3 @@ gem "sass", "~> 3.4"
 gem "compass", "~> 1.0"
 
 gem 'middleman-s3_sync', "~> 3.0"
-
-# http://friendly.gehirn.ne.jp/2014/12/27/568.html
-# Avoid deployment error
-# gem "padrino-support", "0.12.2"
-# gem "colorize", "0.7.3"
